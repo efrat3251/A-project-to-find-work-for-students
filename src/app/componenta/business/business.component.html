@@ -1,0 +1,68 @@
+<p>business works!</p>
+ <button (click)="route()"></button> 
+
+ <button (click)="changeShowBusiness()">{{ isShowBusiness ? "hide" : "show" }}</button>  
+<!-- ngIf, אם המשתנה טרו יציג אחרת יסתיר תנאי האם להציג --> -->
+ <!-- ngFor מעבר על מערך --> -->
+ <!-- ngIf ngFor לא ניתן לשים את  -->
+
+
+ <tr *ngFor="let Business2 of business;">
+  <ul>
+<li > <p>my lastname is 
+  {{Business2.BusinessName}}</p></li>
+  <p>my name is 
+  <td>{{Business2.BusinessId}}</td></p>
+  <p>my hight is 
+  <td>{{Business2.BusinessCity}}</td></p>
+  <p>my senior years 
+  <td>{{  Business2.SeniorityBusiness}}</td></p>
+  <p>my working hours
+  <td>{{Business2.SalaryHour}}</td></p>
+  <input type="button" value="edit " (click)="edit(Business2,4) "/>
+  <input type="button" value="remove " (click)="removeBusiness(Business2)"/>
+  <input type="button" value=" addBusiness" (click)="addBusiness()"/>
+
+  </ul>
+</tr>n
+ 
+ <div *ngIf="isShowBusiness && business.length; else showError">
+  <tr
+    *ngFor="
+      let Business2 of business;
+      let i = index;
+      let e = even;
+      let o = odd;
+      let last = last;
+      let first = first
+    " 
+    [ngClass]="{ od: o, ev: e }" >
+  
+    <td>{{ Business2.BusinessName}}</td>
+    <td>{{ Business2.BusinessId }}</td> 
+    <td>{{ Business2.BusinessCity}}</td>
+    <td>{{ Business2.ProfessionType}}</td>
+    <td>{{ Business2.LanguageId}}</td>
+    <td>{{ Business2.NumWeekHours}}</td>
+    <td>{{ Business2.SeniorityBusiness }}</td>
+    <td>{{ Business2.SalaryHour}}</td>
+  
+    <input type="button" value="delete" (click)="removeBusiness(Business2)"/>
+    <input type="button" value="edit" (click)="edit(Business2,i)" />
+
+</div>   
+
+<div *ngIf="isEdit"> -->
+  <input [(ngModel)] ="selectedBusiness.BusinessName"/>
+  <input [(ngModel)] ="selectedBusiness.BusinessId"/>
+  <input [(ngModel)] ="selectedBusiness.BusinessCity"/>
+  <input [(ngModel)] ="selectedBusiness.ProfessionType"/>
+  <input [(ngModel)] ="selectedBusiness.LanguageId"/>
+  <input [(ngModel)] ="selectedBusiness.NumWeekHours"/>
+  <input [(ngModel)] ="selectedBusiness.SeniorityBusiness"/>
+  <input [(ngModel)] ="selectedBusiness.SalaryHour"/>
+
+<input type="button" value="save" (click)="save()" />  -->
+ </div>
+<ng-template #showError> The arr is empty </ng-template>   -->
+

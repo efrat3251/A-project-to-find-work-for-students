@@ -1,0 +1,26 @@
+<p>user-property works!</p>
+{{text}}
+<span class="good">{{isShow}}</span>
+<span [class.good]="isShow" [class.error]="!isShow">{{isShow}}</span>
+<!-- אוביקט של קלאסים עם תנאי -->
+<span [ngClass]="{good:isShow, error:!isShow}">{{isShow}}</span>
+<!-- //interpolation-string binding תחביר של שני סוריים מסולסלות סביב המשתנה-->
+<input type="{{myType}}"/>
+<!-- //property binding-תחביר של סוגריים מרובעות סביב התכונה -->
+<input [type]="myType"/>
+<!-- <img src="{{src}}"/>
+<img [src]="src"/> -->
+<!-- {{calcAge()}} -->
+<!-- <button (click)="calcAge()">click me</button> -->
+<!-- //event binding תחביר של סוגריים עגולים סביב שם האירוע- שם האירוע מתחיל באות קטנה (מילה אחת) -->
+<button (click)="calcAge(2010)">click me</button>
+{{age}}
+<!-- <input type="button" (click)="calcAge()"/> -->
+<!-- blur-יציאה מהאינפוט -->
+<input type="text" (blur)="getText($event)">
+<!--  #txt-הגדרת משתנה-יוכר רק בטמפלט htmi -->
+<input type="text" #txt/>
+<button (click)="getTextByRefernce(txt.value)">get value from input</button>
+<!-- <input type="text" [(ngModel)]="myName"> {{myName}} -->
+<button (click)="changeName()"></button>
+

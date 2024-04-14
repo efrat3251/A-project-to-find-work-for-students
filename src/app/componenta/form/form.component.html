@@ -1,0 +1,31 @@
+<p>language works!</p>
+
+<form>
+    <div>
+      <label for="BusinessName">First Name:</label>
+      <input type="text" id="BusinessName" name="BusinessName" [(ngModel)]="business.BusinessName">
+    </div>
+
+    
+    <div> 
+       <label for="BusinessId">BusinessId:</label>
+      <input type="number" id="BusinessId" name="BusinessId" [(ngModel)]="business.BusinessId">
+    </div>
+
+    <div>
+      <label for="BusinessCity">BusinessCity:</label>
+      <input type="number" id="BusinessCity" name="BusinessCity" [(ngModel)]="business.BusinessCity">
+    </div> 
+
+       <div>
+        <label for="LanguageId">LanguageId:</label>
+        <input type="number" id="LanguageId" name="LanguageId" [(ngModel)]="business.LanguageId">
+      </div>
+
+
+      <div>
+        <label for="NumWeekHours">NumWeekHours:</label>
+        <input type="text" id="NumWeekHours" name="NumWeekHours" [(ngModel)]="business.NumWeekHours">
+      </div> 
+    <button type="submit">Add User</button> 
+</form> 
